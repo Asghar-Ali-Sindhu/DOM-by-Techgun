@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Remove EventListner</h1>
+    <button id="btn">Click Me</button>
+</body>
+<script>
+    // todo: We can register two functions on the same event. We can remove an event using addeventListner and external function is used instead of anonymous function.
+         function click1(){
+        console.log("Click1 is activated");
+    }
+    function click2(){
+        console.log("Click2 is activated");
+    }
+    const btn = document.getElementById("btn")
+    btn.addEventListener('click', click1)
+    btn.addEventListener('click', click2)
+    btn.removeEventListener('click', click2)
+
+</script>
+</html>
