@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scroll Event</h1>
+    <!-- ! Show that a page is scrolling -->
+    <!-- <script>
+        window.addEventListener('scroll', function(){
+            console.log("scrolling...");
+        })
+    </script> -->
+    <!-- todo: Check wether it is scrolling up or scrolling down -->
+    <!-- <script>
+        window.addEventListener('wheel', function (event) {
+            if(event.deltaY<0){
+                console.log("scrolling up ...");
+            }else if (event.deltaY>0){
+                console.log("scrolling down ...");
+            }
+        })
+    </script> -->
+    <!-- ? Run an event on a particular pixels of scrolling-->
+    <script>
+        window.addEventListener('scroll', function (event) {
+          if(window.pageYOffset > 250){
+            document.body.style.background = "red"
+          }else{
+            document.body.style.background = "white"
+          }
+        })
+    </script>
+</body>
+</html>
