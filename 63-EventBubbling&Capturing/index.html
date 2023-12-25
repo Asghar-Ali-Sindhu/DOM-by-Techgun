@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #cbd8a9;
+        }
+        #container{
+            padding: 100px;
+            background: #1e0c5c;
+            margin: 100px;
+        }
+        #btn{
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Bubbling & Event Capturing</h1>
+    <!-- todo: Event Bubbling -->
+    <!-- ** In the event bubbling model, an event starts from the most specific element and then flows upward towards the least specific element. For example, When you click the button, the click event occurs in the following order: (i) button (ii) div with the id contianer (iii)body (iv)html (v) document -->
+    <!-- <div id="container">
+        <button id="btn">Click Me</button>
+    </div>
+    <script>
+        const div = document.getElementById("container")
+        const btn = document.getElementById("btn")
+        btn.addEventListener('click', btnClicked)
+        div.addEventListener('click', DivClicked)
+        document.body.addEventListener('click', bodyClicked)
+        function btnClicked(){
+            console.log("button is clicked");
+        }
+        function DivClicked(){
+            console.log("Div is clicked");
+        }
+        function bodyClicked(){
+            console.log("body is clicked");
+        }
+        // third parameter is not passed which is by default is false. This means event bubbling will occur        
+    </script> -->
+    <!-- todo: Event Capturing works in opposite direction as compared to event bubbling -->
+    <div id="container">
+        <button id="btn">Click Me</button>
+    </div>
+    <script>
+        const div = document.getElementById("container")
+        const btn = document.getElementById("btn")
+        btn.addEventListener('click', btnClicked, true)
+        div.addEventListener('click', DivClicked, true)
+        document.body.addEventListener('click', bodyClicked, true)
+        function btnClicked() {
+            console.log("button is clicked");
+        }
+        function DivClicked() {
+            console.log("Div is clicked");
+        }
+        function bodyClicked() {
+            console.log("body is clicked");
+        }
+        // third parameter is passed as true. This means event capturing will occur        
+    </script>
+</body>
+</html>
