@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events On Form</h1>
+    <!-- todo: In order to detect when a form is filled -->
+    <!-- <form action="">
+        <input type="text" id="myInput">
+    </form>
+    <script>
+        const x = document.getElementById("myInput")
+        x.addEventListener('focus', myFocus);
+        x.addEventListener('blur', myBlur);
+        x.addEventListener('change', function(){
+            console.log(this.value);
+        });
+        function myFocus(){
+            x.style.background = "teal"
+        }
+        function myBlur(){
+            x.style.background = "white"
+        }
+        
+    </script> -->
+    <!-- ! Input Event is triggered as we write some text in the input field -->
+    <form action="">
+            <input type="text" id="myInput">
+        </form>
+        <script>
+            const x = document.getElementById("myInput")
+            x.addEventListener('focus', myFocus);
+            x.addEventListener('blur', myBlur);
+            x.addEventListener('input', function(){
+                console.log(this.value);
+            });
+            function myFocus(){
+                x.style.background = "teal"
+            }
+            function myBlur(){
+                x.style.background = "white"
+            }
+            
+        </script>
+</body>
+</html>
