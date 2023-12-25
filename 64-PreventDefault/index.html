@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prevent Default in JS</h1>
+   
+    <!-- todo: It is the default behaviour of this anker tag that when it is clicked, it will divert to www.google.com. However, we want to prevent this default behavior  -->
+    <!-- <a href="https://www.google.com" id="anchor">Click ME</a>
+    <script>
+        const link = document.getElementById('anchor')
+        link.addEventListener('click', function(e){
+            console.log("link clicked ....");
+            e.preventDefault();
+        })
+    </script> -->
+    <!-- ! Another Example -->
+    <form action="" id="myForm">
+        <input type="text">
+        <input type="submit">
+    </form>
+    <script>
+        const form = document.getElementById('myForm')
+        form.addEventListener('click', function(e){
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>
